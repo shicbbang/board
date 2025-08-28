@@ -3,6 +3,7 @@ package com.my.board.entity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +20,8 @@ public class Article {
     private String content;
 
     @OneToMany(fetch = FetchType.LAZY,
-    mappedBy = "article", cascade = {CascadeType.PERSIST,
-            CascadeType.REMOVE})
+            mappedBy = "article",
+            cascade = {CascadeType.PERSIST,
+                    CascadeType.REMOVE})
     List<Comment> comments = new ArrayList<>();
 }
