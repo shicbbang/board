@@ -24,7 +24,7 @@ public class RedirectController {
     }
 
     @RequestMapping(value = "requestMapping",
-        method = RequestMethod.GET)
+            method = RequestMethod.GET)
     // Spring 5.0 아래 버전에서 사용
     // Spring 5.0 이상은  @GetMapping 사용 가능
     public String requestMapping(Model model) {
